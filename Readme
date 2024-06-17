@@ -1,0 +1,9 @@
+
+Install the cilium/ebpf library:
+go get github.com/cilium/ebpf
+
+Compile the eBPF program using clang:
+clang -O2 -target bpf -c packet_filter.c -o packet_filter.o
+
+Run the Go program:
+sudo go run main.go
